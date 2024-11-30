@@ -1,0 +1,544 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #faf5f5;
+  color: #333;
+  height: 4000px;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 204, 128, 0.8)); /* خلفية شفافة بتدرج */
+  padding: 15px 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top left, #ff9a9e, #fad0c4); /* تدرج اللون */
+  opacity: 0.5;
+  pointer-events: none; /* يمنع التفاعل */
+  z-index: -1;
+}
+
+.logo-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.logo-search i {
+  font-size: 28px;
+  color: #ff6f61; /* لون الأيقونة */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-bar {
+  padding: 10px 15px;
+  border: 2px solid #ff9a9e; /* لون حدود متناسق */
+  border-radius: 25px;
+  outline: none;
+  background-color: white;
+  width: 300px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+
+.search-bar:focus {
+  border-color: #ff6f61; /* تغير لون الحدود عند التركيز */
+}
+
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* لون النص */
+  transition: color 0.3s ease, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff6f61; /* لون عند التمرير */
+  transform: scale(1.1); /* تكبير النص عند التمرير */
+}
+
+/* Main Banner Section */
+.main-banner {
+  background: url('../images/0460_PF_Fall24_Fall_Site_SWAGv2-2.jpg') no-repeat center center/cover;
+  height: 100vh; /* تغطية كامل الشاشة */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.main-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.main-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+button.btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.3s ease;
+}
+
+button.btn:hover {
+  background: #ffd700;
+  color: #333;
+}
+
+/* عنوان القسم */
+/* عنوان القسم */
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333; /* لون داكن يناسب تصميم الصفحة */
+  margin-bottom: 30px;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #FF6347; /* استخدام لون دافئ ليتناسب مع الورود */
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* تنسيق الخدمات */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #f4f4f4; /* لون خلفية ناعم ليتناسب مع بقية الصفحة */
+  border-radius: 15px;
+}
+
+/* تصميم الصندوق */
+.service-box {
+  background-color: #fff;
+  border: 2px solid #ddd; /* حدود ناعمة */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.service-box:hover {
+  transform: translateY(-8px); /* حركة خفيفة عند التمرير */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* ظلال خفيفة */
+  border-color: #FF6347; /* تغيير الحدود عند التمرير */
+}
+
+/* إضافة تأثير after */
+.service-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; /* جعل التأثير يظهر من الزاوية العلوية اليسرى */
+  width: 0px;
+  height: 0px;
+  background-color: #FF6347; /* اللون نفسه ليظهر من الزاوية */
+  opacity: 0;
+  
+  z-index: -1;
+}
+
+.service-box:hover::after {
+  opacity:0.2; 
+  
+  width: 100%;
+  height: 100%;
+  transition: 1s ;
+}
+
+.service-box i {
+  font-size: 2.5em;
+  color: #FF6347; /* لون الأيقونات */
+  margin-bottom: 20px;
+}
+
+.service-box h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1em;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* تنسيق الخطوط بشكل عام */
+h2, .service-box h2, .service-box p {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+}
+/* تنسيق القسم */
+/* تنسيق القسم */
+/* تنسيق القسم */
+.offer {
+  padding: 50px 20px;
+  background-color: #f5f5f5; /* لون خلفية هادئ */
+  text-align: center;
+}
+
+.offer h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.offer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.offer-item {
+  position: relative;
+  width: 25%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* إضافة مسافة بين الصفوف */
+}
+
+.offer-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.offer-item:hover img {
+  transform: scale(1.1); /* تكبير الصورة عند التمرير */
+}
+
+.offer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* تدرج لوني داكن */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.offer-item:hover .offer-overlay {
+  opacity: 1; /* يظهر عند التمرير */
+}
+
+.offer-overlay h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.offer-overlay p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* تنسيق الأيقونات */
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-heart, .fa-pinterest {
+  font-size: 1.8em;
+  color: #FFC107; /* اللون الأصفر للأيقونات */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.fa-heart:hover, .fa-pinterest:hover {
+  transform: scale(1.2);
+  color: #FF5733; /* اللون البرتقالي عند التمرير */
+}
+
+/* قسم What We Offer */
+#what-we-offer {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+#what-we-offer h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#what-we-offer h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ff6f61; /* لون الخط السفلي */
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.offer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.offer-box {
+  position: relative;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  height: 220px; /* زيادة طول الصندوق */
+  text-align: center;
+  display: flex; /* استخدام Flexbox */
+  flex-direction: column; /* ترتيب العناصر عمودياً */
+  justify-content: space-between; /* توزيع العناصر: العنوان للأعلى والنص للأسفل */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+.offer-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.offer-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; /* جعل التأثير يظهر من الزاوية العلوية اليسرى */
+  width: 0px;
+  height: 0px;
+  background-color: #FF6347; /* اللون نفسه ليظهر من الزاوية */
+  opacity: 0;
+  
+  z-index: -1;
+}
+
+.offer-box:hover::after {
+  opacity:0.2; 
+  
+  width: 100%;
+  height: 100%;
+  transition: 1s ;
+}
+.offer-box i {
+  font-size: 2em;
+  color: #ff6f61; /* لون الأيقونات */
+  margin-bottom: 15px;
+}
+
+.offer-box h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.offer-box p {
+  font-size: 0.95em;
+  color: #777;
+  line-height: 1.6;
+  margin-top: auto; /* اجعل النص يتحرك للأسفل */
+  transition: color 0.3s ease;
+}
+/*wy choose us*/
+/* القسم الرئيسي */
+.why-choose-us {
+  padding: 50px 20px;
+  background-color: #fff; /* لون الخلفية */
+}
+
+.why-choose-us .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* النصوص */
+.why-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left; /* النص على اليسار */
+}
+
+.why-text h2 {
+  font-size: 2.5rem;
+  color: #5a5a89;
+  margin-bottom: 20px;
+}
+
+.why-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-text ul li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.why-text ul li span {
+  color: green;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* الصورة */
+.why-image {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.why-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.dots {
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ff781f;
+}
+
+.dot:hover {
+  background-color: #777;
+}
+.flower-section {
+  position: relative;
+  background-image: url('../images/top-view-orange-lilies-with-copy-space.jpg'); /* ضع هنا رابط صورة الأزهار */
+  background-size:cover;
+  background-position:flex;
+  background-attachment: fixed;
+  height: 400px; /* يمكنك تعديل الارتفاع */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flower-overlay {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.stat {
+  text-align: center;
+  color: white;
+}
+
+.stat i {
+  font-size: 2em;
+  color: #fc6e01; /* لون الأيقونات */
+}
+
+.stat p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+  color: #fc6e01;
+}
+
+.stat span {
+  font-weight: bold;
+  font-size: 1.5em;
+}
