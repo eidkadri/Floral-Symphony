@@ -679,3 +679,337 @@ h2, .service-box h2, .service-box p {
 .flower-center-card {
   margin: 0 20px; 
 }
+.team-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 20px;
+  background: url('../images/0460_PF_Fall24_Fall_Site_SWAGv2-2.jpg') no-repeat center center/cover;
+}
+
+.team-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+}
+
+.team-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 2px solid #FF6347;
+}
+
+.team-name {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.team-role {
+  font-size: 16px;
+  color: #FF6F61;
+  font-weight: bold;
+}
+
+.team-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+/* قسم الفريق */
+.our-team {
+  text-align: center;
+  padding: 40px 10px;
+  background-color: #fdfdfd;
+
+}
+
+.our-team h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.our-team h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #e74c3c; /* لون الخط الأحمر */
+  margin: 10px auto 0;
+}
+
+/* الحاوية الرئيسية للفريق */
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* السماح بالالتفاف عند ضيق الشاشة */
+  gap: 20px; /* مسافة بين البطاقات */
+  margin-top: 20px;
+  position: relative;
+}
+
+/* البطاقات */
+.team-card-2 {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+  height:auto;
+  position: relative; /* لإظهار العناصر المطلقة داخله */
+}
+
+.team-card-2:hover {
+  transform: translateY(-5px);
+}
+.team-card-2::after{
+  content: "";
+
+    position: absolute;
+
+    width: 100% ;
+    height: 0 ;
+
+    top: 0;
+    left: 0;
+
+    transition: 1s ;
+
+    background-color: rgb(255, 115, 0);
+
+    opacity: 0;
+  
+
+}
+.team-card-2:hover::after {
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.5 ;
+}
+
+/* الصور */
+
+.team-card-2 img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e74c3c;
+  margin-bottom: 10px;
+}
+.team-overley {
+  position: absolute;
+  top: 0;
+  right: 0; /* محاذاة للأعلى يمين */
+  width: 60px; /* عرض الأوفرلاي ليكون ضيقًا */
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* ترتيب الأيقونات بشكل شاقولي */
+  align-items: center; /* توسيط الأيقونات أفقياً */
+  gap: 10px; /* مسافة بين الأيقونات */
+  background: none; /* إزالة الخلفية الداكنة إذا كانت غير مرغوبة */
+  opacity: 0; /* مخفي افتراضيًا */
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.team-card-2:hover .team-overley {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-overley a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #3498db; /* لون خلفية الأيقونة */
+  color: #fff; /* لون الأيقونة */
+  font-size: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.team-overley a:hover {
+  background-color: #2980b9; /* لون جديد عند التحويم */
+}
+
+.team-card-2 h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.team-card-2 p {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+/* القسم الأساسي */
+.recent-news {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.recent-news h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* الحاوية */
+.news-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* تعديل البطاقة */
+.news-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* لجعل العنصر المطلق ينسّق بداخله */
+  z-index: 1; /* لضمان أن المحتوى يظهر فوق الـ after */
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+/* إضافة تأثير after */
+.news-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 115, 0, 0.5); /* اللون البرتقالي بتأثير شفاف */
+  transition: height 0.5s ease-in-out; /* تحديد تأثير التمدد */
+  z-index: -1; /* لضمان أن التأثير يكون خلف النص */
+}
+
+.news-card:hover::after {
+  height: 100%; /* تمدد اللون ليغطي البطاقة */
+}
+
+/* الصورة */
+.news-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* الأيقونات */
+.news-icons a {
+  
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.news-icons i {
+  
+  color: #0077b5; /* لون موحد للأيقونات */
+}
+
+/* النصوص */
+.news-content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-content p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* زر القراءة */
+.news-button .btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #ff6f61;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.news-button .btn:hover {
+  background-color: #e64c3c;
+}
+/* Footer Section */
+.footer-section {
+  background: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 70, 120)); /* تدرج اللون بين البرتقالي والزهري */
+  padding: 40px 0;
+  text-align: center;
+  color: #fff; /* لون النص أبيض */
+  position: relative;
+}
+
+.footer-logo img {
+  width: 160px; /* تكبير حجم الصورة */
+  margin-bottom: 20px;
+}
+
+/* أيقونات التواصل الاجتماعي */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* مسافة بين الأيقونات */
+  margin: 20px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* حجم الأيقونة أكبر */
+  height: 50px;
+  border-radius: 50%; /* جعل الأيقونات دائرية */
+  background-color: #fff; /* خلفية الأيقونة بيضاء */
+  color: rgb(255, 115, 0); /* لون الأيقونة برتقالي */
+  font-size: 22px; /* حجم الأيقونة */
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: #000; /* تغيير الخلفية عند التحريك إلى أسود */
+  color: #fff; /* تغيير لون الأيقونة */
+}
+
+.footer-text p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
